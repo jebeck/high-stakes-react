@@ -1,0 +1,88 @@
+import React from 'react';
+
+import { mount } from 'enzyme';
+
+import App from './App';
+
+jest.useFakeTimers();
+
+describe('a Martian 💧 Factory', () => {
+  let wrapper;
+  beforeEach(() => {
+    wrapper = mount(<App />);
+  });
+
+  describe('hydrazine valve', () => {
+    it('starts closed', () => {
+      expect(wrapper.state('hydrazineValveOpen')).toBeFalsy();
+    });
+
+    it('toggles open when button is clicked', () => {
+      wrapper.find('.Hydrazine').find('button').simulate('click');
+      expect(wrapper.state('hydrazineValveOpen')).toBeTruthy();
+    });
+
+    it('drips hydrazine at expected rate', () => {
+      wrapper.find('.Hydrazine').find('button')
+        .simulate('click');
+
+      const calls = setInterval.mock.calls;
+
+      expect(calls[calls.length - 1][1]).toBe(1500);
+
+      jest.runOnlyPendingTimers();
+
+      expect(wrapper.state('hydrogen'))
+        .toBeGreaterThanOrEqual(2);
+    });
+  });
+
+  describe('burning wood shavings', () => {
+    it('has no effect if no H₂ is available to 🔥', () => {
+      expect(wrapper.state('hydrogen')).toEqual(0);
+
+      wrapper.find('.Chimney').find('button')
+        .simulate('click');
+
+      expect(wrapper.state('fireBurning')).toBeFalsy();
+    });
+
+    it('lights H₂ & O₂ on 🔥 to produce 💧', () => {
+      wrapper.setState({hydrogen: 5});
+
+      wrapper.find('.Chimney').find('button')
+        .simulate('click');
+
+      expect(wrapper.state('fireBurning')).toBeTruthy();
+    });
+
+    it('consumes 2x more H₂ than O₂ through combustion', () => {
+      const startH2 = 4;
+      wrapper.setState({hydrogen: startH2});
+      wrapper.find('.Chimney').find('button')
+        .simulate('click');
+      const instance = wrapper.instance();
+      const startO2 = instance.totalOxygen();
+
+      jest.runOnlyPendingTimers();
+
+      expect(startH2 - wrapper.state('hydrogen'))
+        .toBeCloseTo(0.8);
+
+      expect(startH2 - wrapper.state('hydrogen'))
+        .toBeCloseTo(2 * (startO2 - instance.totalOxygen()));
+    });
+
+    it('stops burning when out of H₂', () => {
+      wrapper.setState({hydrogen: 5});
+      wrapper.find('.Chimney').find('button').simulate('click');
+      expect(wrapper.state('fireBurning')).toBeTruthy();
+
+      jest.runOnlyPendingTimers();
+      // jest.runAllTimers();
+
+      expect(wrapper.state('hydrogen')).toEqual(0);
+      expect(wrapper.state('fireBurning')).toBeFalsy();
+    });
+  });
+});

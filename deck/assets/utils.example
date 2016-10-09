@@ -1,0 +1,32 @@
+
+
+
+
+
+
+
+
+/**
+ * totalOxygen
+ *
+ * @param {...Number} L of O₂
+ *
+ * @return {Number} sum O₂
+ */
+export function totalOxygen(...tanks) {
+  return tanks.reduce((pre, val) => {
+    return pre + val;
+  }, 0);
+}
+
+/**
+ * readyToCombust
+ *
+ * @param {Number} liters of hydrogen
+ * @param {Number} liters of O₂
+ *
+ * @return {Boolean} is ready to combust?
+ */
+export function readyToCombust(H₂, O₂) {
+  return H₂ > 1 && O₂ > 25;
+}
