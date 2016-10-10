@@ -704,7 +704,7 @@ export default class Presentation extends React.Component {
               Slides
             </Heading>
             <Heading fit size={2} style={{fontFamily: "monospace"}} textColor="white">
-              bit.ly/jebeck-hsr
+              bit.ly/high-stakes-react
             </Heading>
           </Slide>
           <Slide bgImage={images.me}>
