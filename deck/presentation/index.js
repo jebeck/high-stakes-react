@@ -128,17 +128,15 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
           <Slide bgImage={images.me}>
-            <div style={{margin: "0 auto", width: "75%"}}>
-              <Text lineHeight={1.25} textAlign="left" textSize="6rem" textColor="#281946">
-                <FaHome/>: <S type="bold">janabeck.com</S>
-              </Text>
-              <Text lineHeight={1.25} textAlign="left" textSize="6rem" textColor="#281946">
-                <FaGithub/>: <S type="bold">@jebeck</S>
-              </Text>
-              <Text lineHeight={1.25} textAlign="left" textSize="6rem" textColor="#281946">
-                <FaTwitter/>: <S type="bold">@iPancreas</S>
-              </Text>
-            </div>
+            <Text lineHeight={1.5} textAlign="left" textSize="5rem" textColor="#281946">
+              <FaHome/>: <S type="bold">janabeck.com</S>
+            </Text>
+            <Text lineHeight={1.5} textAlign="left" textSize="5rem" textColor="#281946">
+              <FaGithub/>: <S type="bold">@jebeck (& elsewhere)</S>
+            </Text>
+            <Text lineHeight={1.5} textAlign="left" textSize="5rem" textColor="#281946">
+              <FaTwitter/>: <S type="bold">@iPancreas</S>
+            </Text>
           </Slide>
           <Slide bgColor="secondary">
             <Image src={images.tidepool} style={{ border: "25px solid white" }} width="100%" />
@@ -694,17 +692,15 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
           <Slide bgImage={images.me}>
-            <div style={{margin: "0 auto", width: "75%"}}>
-              <Text lineHeight={1.25} textAlign="left" textSize="6rem" textColor="#281946">
-                <FaHome/>: <S type="bold">janabeck.com</S>
-              </Text>
-              <Text lineHeight={1.25} textAlign="left" textSize="6rem" textColor="#281946">
-                <FaGithub/>: <S type="bold">@jebeck</S>
-              </Text>
-              <Text lineHeight={1.25} textAlign="left" textSize="6rem" textColor="#281946">
-                <FaTwitter/>: <S type="bold">@iPancreas</S>
-              </Text>
-            </div>
+            <Text lineHeight={1.5} textAlign="left" textSize="5rem" textColor="#281946">
+              <FaHome/>: <S type="bold">janabeck.com</S>
+            </Text>
+            <Text lineHeight={1.5} textAlign="left" textSize="5rem" textColor="#281946">
+              <FaGithub/>: <S type="bold">@jebeck (& elsewhere)</S>
+            </Text>
+            <Text lineHeight={1.5} textAlign="left" textSize="5rem" textColor="#281946">
+              <FaTwitter/>: <S type="bold">@iPancreas</S>
+            </Text>
           </Slide>
         </Deck>
       </Spectacle>
