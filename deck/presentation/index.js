@@ -1,6 +1,8 @@
 // Import React
 import React from "react";
 
+import { FaGithub, FaHome, FaTwitter } from "react-icons/lib/fa";
+
 // Import Spectacle Core tags
 import {
   CodePane,
@@ -126,9 +128,17 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
           <Slide bgImage={images.me}>
-            <Heading size={1} fit textColor="white">
-              @jebeck
-            </Heading>
+            <div style={{margin: "0 auto", width: "75%"}}>
+              <Text lineHeight={1.25} textAlign="left" textSize="6rem" textColor="#281946">
+                <FaHome/>: <S type="bold">janabeck.com</S>
+              </Text>
+              <Text lineHeight={1.25} textAlign="left" textSize="6rem" textColor="#281946">
+                <FaGithub/>: <S type="bold">@jebeck</S>
+              </Text>
+              <Text lineHeight={1.25} textAlign="left" textSize="6rem" textColor="#281946">
+                <FaTwitter/>: <S type="bold">@iPancreas</S>
+              </Text>
+            </div>
           </Slide>
           <Slide bgColor="secondary">
             <Image src={images.tidepool} style={{ border: "25px solid white" }} width="100%" />
@@ -682,6 +692,19 @@ export default class Presentation extends React.Component {
             <Heading size={1} fit caps textColor="secondary">
               demo
             </Heading>
+          </Slide>
+          <Slide bgImage={images.me}>
+            <div style={{margin: "0 auto", width: "75%"}}>
+              <Text lineHeight={1.25} textAlign="left" textSize="6rem" textColor="#281946">
+                <FaHome/>: <S type="bold">janabeck.com</S>
+              </Text>
+              <Text lineHeight={1.25} textAlign="left" textSize="6rem" textColor="#281946">
+                <FaGithub/>: <S type="bold">@jebeck</S>
+              </Text>
+              <Text lineHeight={1.25} textAlign="left" textSize="6rem" textColor="#281946">
+                <FaTwitter/>: <S type="bold">@iPancreas</S>
+              </Text>
+            </div>
           </Slide>
         </Deck>
       </Spectacle>
