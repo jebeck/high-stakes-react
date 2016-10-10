@@ -691,6 +691,22 @@ export default class Presentation extends React.Component {
               demo
             </Heading>
           </Slide>
+          <Slide bgImage={images.crater}>
+            <Heading lineHeight={1.5} size={3} textColor="tertiary">
+              The example app
+            </Heading>
+            <Heading fit size={2} style={{fontFamily: "monospace"}} textColor="white">
+              bit.ly/jebeck-mwf
+            </Heading>
+          </Slide>
+          <Slide bgImage={images.crater}>
+            <Heading lineHeight={1.5} size={3} textColor="tertiary">
+              Slides
+            </Heading>
+            <Heading fit size={2} style={{fontFamily: "monospace"}} textColor="white">
+              bit.ly/jebeck-hsr
+            </Heading>
+          </Slide>
           <Slide bgImage={images.me}>
             <Text lineHeight={1.5} textAlign="left" textSize="5rem" textColor="#281946">
               <FaHome/>: <S type="bold">janabeck.com</S>
