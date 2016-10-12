@@ -1,7 +1,7 @@
 // Import React
 import React from "react";
 
-import { FaGithub, FaHome, FaTwitter } from "react-icons/lib/fa";
+import { FaGithub, FaHome, FaRefresh, FaTwitter } from "react-icons/lib/fa";
 
 // Import Spectacle Core tags
 import {
@@ -64,7 +64,7 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Spectacle theme={theme}>
-        <Deck transition={["fade"]} transitionDuration={500}>
+        <Deck progress="number" transition={["fade"]} transitionDuration={500}>
           <Slide bgImage={images.kitten}>
             <Heading size={1} fit caps lineHeight={1} textColor="white">
               High-stakes React
@@ -117,13 +117,13 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
           <Slide bgColor="tertiary">
-            <Heading lineHeight={1.5} size={2} caps textColor="white">
+            <Heading lineHeight={1.25} size={2} caps textColor="white">
               clean architecture
             </Heading>
-            <Text style={{ fontSize: "8rem" }}>
-              ♻️
+            <Text style={{ color: "white", fontSize: "8rem" }}>
+              <FaRefresh />
             </Text>
-            <Heading lineHeight={1.25} size={2} caps textColor="white">
+            <Heading lineHeight={1.5} size={2} caps textColor="white">
               testability
             </Heading>
           </Slide>
@@ -588,11 +588,11 @@ export default class Presentation extends React.Component {
             </Heading>
           </Slide>
           <Slide bgColor="tertiary">
-            <List textColor="secondary">
-              <ListItem>utils (✅)</ListItem>
-              <ListItem>API wrapper (✅)</ListItem>
-              <ListItem>redux</ListItem>
-              <ListItem>redux-saga</ListItem>
+            <List style={{ margin: "0 auto", width: "60%" }} textColor="secondary">
+              <ListItem textSize="4rem">utils (✅)</ListItem>
+              <ListItem textSize="4rem">API wrapper (✅)</ListItem>
+              <ListItem textSize="4rem">redux</ListItem>
+              <ListItem textSize="4rem">redux-saga</ListItem>
             </List>
           </Slide>
           <CodeSlide
