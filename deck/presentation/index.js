@@ -157,7 +157,7 @@ export default class Presentation extends React.Component {
               pancreatic <S type="bold">𝛽-cells</S>
             </Text>
             <Text style={{ fontSize: "1.5rem", marginTop: "2rem" }} textColor="white">
-              TODO: add photo credit
+              Image by Isaac Yonemoto
             </Text>
           </Slide>
           <Slide bgImage={images.injection}/>
